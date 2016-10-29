@@ -178,6 +178,8 @@
 
 	echo "</pre><pre>";
 	print_r($newGet);
+	echo "</pre>";
+
 
 
 	}else{

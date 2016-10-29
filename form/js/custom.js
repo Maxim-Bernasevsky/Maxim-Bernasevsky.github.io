@@ -1,4 +1,6 @@
+
 (function() {
+
 	// Before using it we must add the parse and format functions
 	// Here is a sample implementation using moment.js
 	validate.extend(validate.validators.datetime, {
@@ -160,10 +162,7 @@
 	form.addEventListener("submit", function(ev) {
 		ev.preventDefault();
 		handleFormSubmit(form);
-		var newGet = toJS();
-		newGet = newGet.split('```');
-		console.log(newGet);
-		getIndicator(newGet);
+
 	});
 
 
@@ -185,8 +184,6 @@
 		showErrors(form, errors || {});
 		if (!errors) {
 			$('form').submit();
-
-
 		}
 	}
 
@@ -263,18 +260,30 @@
 		var b = Math.floor(Math.random() * 2.5 * 100);
 
 		$('body')[0].style.backgroundColor = "rgba(" + r + "," + g + "," + b + ", .038)";
-
 	}, 5000);
 
+	//Scroll indicators
+	function scrollIndicators(){
+		document.addEventListener("scroll", function(ev){
+			if(window.scrollY > document.body.clientHeight - window.innerHeight - 20){
+				$('.indicators')[0].style.bottom = '18px';
+			}else{
+				$('.indicators')[0].style.bottom = '55%';
+			}
+		});
+	}
 
-	document.addEventListener("scroll", function(ev){
-		if(window.scrollY > document.body.clientHeight - window.innerHeight - 20){
-			$('.indicators')[0].style.bottom = '18px';
-		}else{
-			$('.indicators')[0].style.bottom = '55%';
+	//hook scroll
+	window.onload = function() {
+		if($('.indicators')[0] != undefined){
+			scrollIndicators();
 		}
-	});
+	}
+
+
 
 })();
+
+
 
 
