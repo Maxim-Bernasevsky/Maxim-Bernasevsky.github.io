@@ -1,0 +1,18 @@
+#links a{
+	background: #edfff5;
+	display: inline-block;
+	padding: 5px 10px;
+	margin: 3px;
+	color: #155799;
+	border-radius: 3px;
+	transition: background .14s ease-in-out;
+	border: 1px solid #EEE;
+}
+#links a:hover{
+	background: #f0f5f7;
+	color: #444;
+}
+#links h2{
+	text-align: right;
+	border-bottom: 2px solid #eee;
+}

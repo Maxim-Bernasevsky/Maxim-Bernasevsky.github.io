@@ -243,22 +243,3 @@ a {
 @media screen and (max-width: 42em) {
 	.site-footer {
 		font-size: 0.9rem; } }
-
-
-
-#links a{
-	background: #ddd;
-	display: inline-block;
-	padding: 5px 10px;
-	margin: 3px;
-	border-radius: 3px;
-	transition: background .14s ease-in-out;
-}
-#links a:hover{
-	background: #e3feef;
-	color: #222;
-}
-#links h2{
-	text-align: right;
-	border-bottom: 2px solid #eff0f1;
-}
